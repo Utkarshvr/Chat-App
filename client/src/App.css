@@ -59,6 +59,9 @@ body {
   margin: 0;
 }
 .chat-window .chat-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
   height: 45px;
   border-radius: 6px;
   background: #263238;
@@ -72,7 +75,29 @@ body {
   font-weight: 700;
   line-height: 45px;
 }
+.chat-window .chat-header button {
+  padding: 1em 2em;
+  /* margin: 6px 2px; */
+  background: rgba(255, 255, 255, 0.2);
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: fit-content;
+
+  border: 1px solid #fff;
+  color: #fff;
+  outline: none;
+  /* border-radius: 4px; */
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+}
+
+.chat-window .chat-header button:hover {
+  background: rgba(255, 255, 255, 0.3);
+
+}
 .chat-window .chat-body {
   height: calc(450px - (45px + 70px));
   border: 1px solid #263238;
@@ -97,25 +122,22 @@ body {
 }
 
 .chat-window .chat-body .message .message-content {
-  width: auto;
-  height: auto;
-  min-height: 40px;
   max-width: 120px;
   background-color: #43a047;
   border-radius: 5px;
   color: white;
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-right: 5px;
   margin-left: 5px;
-  padding-right: 5px;
-  padding-left: 5px;
+  padding: 0.5em;
   overflow-wrap: break-word;
   word-break: break-word;
 }
 
 #you {
-  justify-content: flex-start;
+  justify-content: flex-end;
 }
 
 #you .message-content {
@@ -128,7 +150,7 @@ body {
 }
 
 #other {
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 #other .message-content {
